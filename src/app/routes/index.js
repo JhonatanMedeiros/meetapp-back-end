@@ -4,6 +4,7 @@ import AuthRouter from './AuthRouter';
 import ProfileRouter from './ProfileRouter';
 import FileRouter from './FileRouter';
 import MeetupRouter from './MeetupRouter';
+import OrganizingRouter from './OrganizingRouter';
 
 import authMiddleware from '../middlewares/auth';
 
@@ -20,5 +21,7 @@ router.use('/profile', ProfileRouter);
 router.use('/files', FileRouter);
 
 router.use('/meetups', MeetupRouter);
+
+router.use('/organizing', OrganizingRouter);
 
 export default router;
