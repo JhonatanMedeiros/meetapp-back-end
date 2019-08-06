@@ -3,6 +3,7 @@ import { Router } from 'express';
 import AuthRouter from './AuthRouter';
 import ProfileRouter from './ProfileRouter';
 import FileRouter from './FileRouter';
+import MeetupRouter from './MeetupRouter';
 
 import authMiddleware from '../middlewares/auth';
 
@@ -17,5 +18,7 @@ router.use(authMiddleware);
 router.use('/profile', ProfileRouter);
 
 router.use('/files', FileRouter);
+
+router.use('/meetups', MeetupRouter);
 
 export default router;

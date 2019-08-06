@@ -1,7 +1,7 @@
 import File from '../models/File';
 
 class FileController {
-  async store(req, res) {
+  static async store(req, res) {
     const { originalname: name, filename: path } = req.file;
 
     const file = await File.create({
@@ -13,4 +13,4 @@ class FileController {
   }
 }
 
-export default new FileController();
+export default FileController;
