@@ -1,6 +1,8 @@
+import 'dotenv/config';
 import express from 'express';
 
-import routes from './routes';
+import './database';
+import routes from './app/routes';
 
 class App {
   constructor() {
@@ -12,6 +14,7 @@ class App {
 
   middlewares() {
     this.server.use(express.json());
+    this.server.use(express.urlencoded({ extended: false }));
   }
 
   routes() {
