@@ -24,4 +24,6 @@ router.use('/meetups', MeetupRouter);
 
 router.use('/organizing', OrganizingRouter);
 
+router.use('/subscriptions', OrganizingRouter);
+
 export default router;
