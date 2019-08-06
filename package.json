@@ -6,8 +6,10 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "start": "sucrase-node src/index.js",
+    "queue": "sucrase-node src/queue.js",
     "start:dev": "nodemon src/index.js",
-    "queue": "nodemon src/queue.js"
+    "queue:dev": "nodemon src/queue.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
