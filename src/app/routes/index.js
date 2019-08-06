@@ -2,6 +2,7 @@ import { Router } from 'express';
 
 import AuthRouter from './AuthRouter';
 import ProfileRouter from './ProfileRouter';
+import FileRouter from './FileRouter';
 
 import authMiddleware from '../middlewares/auth';
 
@@ -14,5 +15,7 @@ router.use('/auth', AuthRouter);
 router.use(authMiddleware);
 
 router.use('/profile', ProfileRouter);
+
+router.use('/files', FileRouter);
 
 export default router;
